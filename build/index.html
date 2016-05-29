@@ -1,0 +1,1100 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#fff">
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet"  href="css/materialize.css" media="screen,projection"/>
+	<link rel="stylesheet"  href="css/style.css" media="screen,projection"/>
+
+	<script src="js/app.js"></script>
+		<script type="text/javascript" src="js/googleMaps.js"></script>
+	<script type="text/javascript">
+			function loadScript() {
+				var script = document.createElement("script");
+				script.type = "text/javascript";
+				script.src = "http://maps.googleapis.com/maps/api/js?sensor=true&callback=initializeMap";
+				document.body.appendChild(script);
+			}
+			if (window.addEventListener) window.addEventListener("load", loadScript, false);
+			else if (window.attachEvent) window.attachEvent("onload", loadScript);
+
+			function initializeMap(){
+				Map.initializeMap('map');
+
+				Map.initializeMarkers(function(){
+					Map.createMarker({
+						address: "улица Лайоша Гавро, 8, Киев, город Киев, Украина", //fill address here
+						title: 'Hello World!', //fill title here maybe same as Hotel Name
+						content: '<div class="mapTooltip left"><div class="inner"><div class="cHolder"><div class="tooltipPreview"><img src="images/1.jpg" alt="hotel" /></div><div class="tooltipDescription"><div class="info-right"><p>was £550 <span class="note">per night</span></p><p class="price">£450 <span class="note">per night</span></p><p class="note">by vitvad.com</p><p><a class="detail url" href="#">VIEW Details</a></p></div><div class="info-left"><h2>Home sweet home</h2></div></div></div></div><span class="arrowTop"></span><span class="arrowBottom"></span><span class="arrowLeft"></span><span class="arrowRight"></span></div>', //fill html
+						marker: '<div class="mapMarker">1</div>', // set Index number
+						contentOffset: {x: 31, y: -98, z: 1000-1}, //don't touch. this is design settings
+						markerOffset: {x:0, y: -33, z: 500-1} //don't touch. this is design settings
+					});
+					
+				});
+			}
+		</script>
+
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<!-- BEGIN header -->
+	<header class="header">
+		<div class="top__box_header">
+			<div class="container">
+				<div class="row">
+					<div class="col l2">
+					<span class="slogan">
+					Делаем добро вместе!
+					</span>
+					</div>
+					<div class="col l8">
+						<ul class="top_nav">
+							<li><a href="#">О Frontline</a></li>
+							<li><a href="#">Подписка на рассылку</a></li>
+							<li><a href="#">Обратная связь</a></li>
+							<li><a href="#">Контакты</a></li>
+	
+						</ul>
+					</div>
+					<div class="col l2">
+						<ul class="right">
+							<li>
+							<a href="#"><i class="material-icons">search</i></a>
+							</li>
+							<li>
+							<a href="#"><i class="icon-fb"></i></a>
+							</li>
+							<li>
+							<a href="#">EN</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box__nav">
+			<div class="container">
+				<div class="row">
+					<div class="col l2">
+						<a href="#">
+							<img src="img/logo.png" alt="">
+						</a>
+					</div>
+					<div class="col l8">
+						<nav>
+	    <div class="nav-wrapper">
+	      <ul id="nav-mobile" class="left hide-on-med-and-down">
+	        <li><a href="#">Миссионерские центры</a></li>
+	        <li><a href="#">Новости</a></li>
+	        <li><a href="#">Блог</a></li>
+	        <li><a href="#">Нужды</a></li>
+	        <li><a href="#">Проекты</a></li>
+	        <li><a href="#">Видео</a></li>
+	      </ul>
+	                               
+	    </div>
+	  </nav>
+					</div>
+					<div class="col l2">
+						<div class="valign-wrapper">
+						<div class="center-align">
+							<a href="#">ПОЖЕРТВОВАТЬ</a>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- END header -->
+	<div class="content">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m6 l8">
+					<span class="h3 yell">
+						Мы идём туда, где боль, чтобы провозгласить правду
+	Божью и восстановить разрушенное!
+					</span>	
+						<div class="map">
+					<div class="row">
+						<div class="col s12 m12 l12">
+							<div id="map">
+							</div>
+						</div>
+						<div class="col l9">
+							<p>
+								<b>FrontLineHelp</b> - это гуманитарная и духовная помощь гражданскому населению в зоне военного конфликта на востоке Украины.
+	
+	
+							</p>
+						</div>
+						<div class="col l3">
+							<ul>
+								<li>Наши центры</li>
+								<li>Хотим открыть</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col s12 m6 l4">
+					<div class="row">
+					<span class="h3 anons">
+						анонсы мероприятий
+					</span>
+						<div class="col s12 m12 l12">
+							<ul class="collapsible" data-collapsible="accordion">
+	    <li>
+	      <div class="collapsible-header active">Заголовок для примера</div>
+	      <div class="collapsible-body">
+	      	<div class="box">
+						<div class="image">
+							<img src="img/acc-bg.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Заголовок первой статьи в блоке “Блог”</a>	
+							</div>
+						</div>
+					</div>
+	      </div>
+	    </li>
+	    <li>
+	      <div class="collapsible-header">Еще заголовок инфо</div>
+	      <div class="collapsible-body">
+	      	<div class="box">
+						<div class="image">
+							<img src="img/acc-bg.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Заголовок первой статьи в блоке “Блог”</a>	
+							</div>
+						</div>
+					</div>
+	      </div>
+	    </li>
+	    <li>
+	      <div class="collapsible-header">Пример названия мероприятия</div>
+	      <div class="collapsible-body">
+	      	<div class="box">
+						<div class="image">
+							<img src="img/acc-bg.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Заголовок первой статьи в блоке “Блог”</a>	
+							</div>
+						</div>
+					</div>
+	      </div>
+	    </li>
+	    <li>
+	      <div class="collapsible-header">Заголовок № 4</div>
+	      <div class="collapsible-body">
+	      	<div class="box">
+						<div class="image">
+							<img src="img/acc-bg.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Заголовок первой статьи в блоке “Блог”</a>	
+							</div>
+						</div>
+					</div>
+	      </div>
+	    </li>
+	  </ul>
+						</div>
+	<div class="accord col s12 m12 l12">
+		<div class="accord__title">
+			<span class="h3">
+				ПОДДЕРЖИ СЕЙЧАС
+			</span>
+		</div>
+	<div class="accord__body">
+	<div class="accord__scroll">
+		<ul class="accord__list">
+			<li>
+				<div class="row">
+	   				<div class="col l3">
+	   					<div class="image">
+	   						<img src="img/need_1.png" alt="">
+	   					</div>
+	   				</div>
+	   				<div class="col l9">
+	   					<div class="name">
+	   						<a href="">Первый новостной заголовок этого блока в качестве примера</a>
+	   					</div>
+	   				<div class="row">
+	   					<div class="col l6">
+	   						<span class="date">
+	   							05 апрель 2016
+	   						</span>
+	   					</div>
+	   					<div class="col l6">
+	   						<span class="place">Киев</span>
+	   					</div>
+	   				</div>
+	   				</div>
+	   			</div>
+			</li>
+			<li>
+				<div class="row">
+	   				<div class="col l3">
+	   					<div class="image">
+	   						<img src="img/need_1.png" alt="">
+	   					</div>
+	   				</div>
+	   				<div class="col l9">
+	   					<div class="name">
+	   						<a href="">Первый новостной заголовок этого блока в качестве примера</a>
+	   					</div>
+	   				<div class="row">
+	   					<div class="col l6">
+	   						<span class="date">
+	   							05 апрель 2016
+	   						</span>
+	   					</div>
+	   					<div class="col l6">
+	   						<span class="place">Киев</span>
+	   					</div>
+	   				</div>
+	   				</div>
+	   			</div>
+			</li>
+			<li>
+				<div class="row">
+	   				<div class="col l3">
+	   					<div class="image">
+	   						<img src="img/need_1.png" alt="">
+	   					</div>
+	   				</div>
+	   				<div class="col l9">
+	   					<div class="name">
+	   						<a href="">Первый новостной заголовок этого блока в качестве примера</a>
+	   					</div>
+	   				<div class="row">
+	   					<div class="col l6">
+	   						<span class="date">
+	   							05 апрель 2016
+	   						</span>
+	   					</div>
+	   					<div class="col l6">
+	   						<span class="place">Киев</span>
+	   					</div>
+	   				</div>
+	   				</div>
+	   			</div>
+			</li>
+			<li>
+				<div class="row">
+	   				<div class="col l3">
+	   					<div class="image">
+	   						<img src="img/need_1.png" alt="">
+	   					</div>
+	   				</div>
+	   				<div class="col l9">
+	   					<div class="name">
+	   						<a href="">Первый новостной заголовок этого блока в качестве примера</a>
+	   					</div>
+	   				<div class="row">
+	   					<div class="col l6">
+	   						<span class="date">
+	   							05 апрель 2016
+	   						</span>
+	   					</div>
+	   					<div class="col l6">
+	   						<span class="place">Киев</span>
+	   					</div>
+	   				</div>
+	   				</div>
+	   			</div>
+			</li>
+			<li>
+				<div class="row">
+	   				<div class="col l3">
+	   					<div class="image">
+	   						<img src="img/need_1.png" alt="">
+	   					</div>
+	   				</div>
+	   				<div class="col l9">
+	   					<div class="name">
+	   						<a href="">Первый новостной заголовок этого блока в качестве примера</a>
+	   					</div>
+	   				<div class="row">
+	   					<div class="col l6">
+	   						<span class="date">
+	   							05 апрель 2016
+	   						</span>
+	   					</div>
+	   					<div class="col l6">
+	   						<span class="place">Киев</span>
+	   					</div>
+	   				</div>
+	   				</div>
+	   			</div>
+			</li>
+			<li>
+				<div class="row">
+	   				<div class="col l3">
+	   					<div class="image">
+	   						<img src="img/need_1.png" alt="">
+	   					</div>
+	   				</div>
+	   				<div class="col l9">
+	   					<div class="name">
+	   						<a href="">Первый новостной заголовок этого блока в качестве примера</a>
+	   					</div>
+	   				<div class="row">
+	   					<div class="col l6">
+	   						<span class="date">
+	   							05 апрель 2016
+	   						</span>
+	   					</div>
+	   					<div class="col l6">
+	   						<span class="place">Киев</span>
+	   					</div>
+	   				</div>
+	   				</div>
+	   			</div>
+			</li>
+			<li>
+				<div class="row">
+	   				<div class="col l3">
+	   					<div class="image">
+	   						<img src="img/need_1.png" alt="">
+	   					</div>
+	   				</div>
+	   				<div class="col l9">
+	   					<div class="name">
+	   						<a href="">Первый новостной заголовок этого блока в качестве примера</a>
+	   					</div>
+	   				<div class="row">
+	   					<div class="col l6">
+	   						<span class="date">
+	   							05 апрель 2016
+	   						</span>
+	   					</div>
+	   					<div class="col l6">
+	   						<span class="place">Киев</span>
+	   					</div>
+	   				</div>
+	   				</div>
+	   			</div>
+			</li>
+			<li>
+				<div class="row">
+	   				<div class="col l3">
+	   					<div class="image">
+	   						<img src="img/need_1.png" alt="">
+	   					</div>
+	   				</div>
+	   				<div class="col l9">
+	   					<div class="name">
+	   						<a href="">Первый новостной заголовок этого блока в качестве примера</a>
+	   					</div>
+	   				<div class="row">
+	   					<div class="col l6">
+	   						<span class="date">
+	   							05 апрель 2016
+	   						</span>
+	   					</div>
+	   					<div class="col l6">
+	   						<span class="place">Киев</span>
+	   					</div>
+	   				</div>
+	   				</div>
+	   			</div>
+			</li>
+			<li>
+				<div class="row">
+	   				<div class="col l3">
+	   					<div class="image">
+	   						<img src="img/need_1.png" alt="">
+	   					</div>
+	   				</div>
+	   				<div class="col l9">
+	   					<div class="name">
+	   						<a href="">Первый новостной заголовок этого блока в качестве примера</a>
+	   					</div>
+	   				<div class="row">
+	   					<div class="col l6">
+	   						<span class="date">
+	   							05 апрель 2016
+	   						</span>
+	   					</div>
+	   					<div class="col l6">
+	   						<span class="place">Киев</span>
+	   					</div>
+	   				</div>
+	   				</div>
+	   			</div>
+			</li>
+			<li>
+				<div class="row">
+	   				<div class="col l3">
+	   					<div class="image">
+	   						<img src="img/need_1.png" alt="">
+	   					</div>
+	   				</div>
+	   				<div class="col l9">
+	   					<div class="name">
+	   						<a href="">Первый новостной заголовок этого блока в качестве примера</a>
+	   					</div>
+	   				<div class="row">
+	   					<div class="col l6">
+	   						<span class="date">
+	   							05 апрель 2016
+	   						</span>
+	   					</div>
+	   					<div class="col l6">
+	   						<span class="place">Киев</span>
+	   					</div>
+	   				</div>
+	   				</div>
+	   			</div>
+			</li>
+			<li>
+				<div class="row">
+	   				<div class="col l3">
+	   					<div class="image">
+	   						<img src="img/need_1.png" alt="">
+	   					</div>
+	   				</div>
+	   				<div class="col l9">
+	   					<div class="name">
+	   						<a href="">Первый новостной заголовок этого блока в качестве примера</a>
+	   					</div>
+	   				<div class="row">
+	   					<div class="col l6">
+	   						<span class="date">
+	   							05 апрель 2016
+	   						</span>
+	   					</div>
+	   					<div class="col l6">
+	   						<span class="place">Киев</span>
+	   					</div>
+	   				</div>
+	   				</div>
+	   			</div>
+			</li>
+			<li>
+				<div class="row">
+	   				<div class="col l3">
+	   					<div class="image">
+	   						<img src="img/need_1.png" alt="">
+	   					</div>
+	   				</div>
+	   				<div class="col l9">
+	   					<div class="name">
+	   						<a href="">Первый новостной заголовок этого блока в качестве примера</a>
+	   					</div>
+	   				<div class="row">
+	   					<div class="col l6">
+	   						<span class="date">
+	   							05 апрель 2016
+	   						</span>
+	   					</div>
+	   					<div class="col l6">
+	   						<span class="place">Киев</span>
+	   					</div>
+	   				</div>
+	   				</div>
+	   			</div>
+			</li>
+			<li>
+				<div class="row">
+	   				<div class="col l3">
+	   					<div class="image">
+	   						<img src="img/need_1.png" alt="">
+	   					</div>
+	   				</div>
+	   				<div class="col l9">
+	   					<div class="name">
+	   						<a href="">Первый новостной заголовок этого блока в качестве примера</a>
+	   					</div>
+	   				<div class="row">
+	   					<div class="col l6">
+	   						<span class="date">
+	   							05 апрель 2016
+	   						</span>
+	   					</div>
+	   					<div class="col l6">
+	   						<span class="place">Киев</span>
+	   					</div>
+	   				</div>
+	   				</div>
+	   			</div>
+			</li>
+			<li>
+				<div class="row">
+	   				<div class="col l3">
+	   					<div class="image">
+	   						<img src="img/need_1.png" alt="">
+	   					</div>
+	   				</div>
+	   				<div class="col l9">
+	   					<div class="name">
+	   						<a href="">Первый новостной заголовок этого блока в качестве примера</a>
+	   					</div>
+	   				<div class="row">
+	   					<div class="col l6">
+	   						<span class="date">
+	   							05 апрель 2016
+	   						</span>
+	   					</div>
+	   					<div class="col l6">
+	   						<span class="place">Киев</span>
+	   					</div>
+	   				</div>
+	   				</div>
+	   			</div>
+			</li>
+			<li>
+				<div class="row">
+	   				<div class="col l3">
+	   					<div class="image">
+	   						<img src="img/need_1.png" alt="">
+	   					</div>
+	   				</div>
+	   				<div class="col l9">
+	   					<div class="name">
+	   						<a href="">Первый новостной заголовок этого блока в качестве примера</a>
+	   					</div>
+	   				<div class="row">
+	   					<div class="col l6">
+	   						<span class="date">
+	   							05 апрель 2016
+	   						</span>
+	   					</div>
+	   					<div class="col l6">
+	   						<span class="place">Киев</span>
+	   					</div>
+	   				</div>
+	   				</div>
+	   			</div>
+			</li>
+		</ul>
+		</div>
+	</div>
+	</div>
+	
+					</div>
+	
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="news">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m12 l12">
+					<span class="h3">НОВОСТИ
+	<a href="#" class="prev-news">prev</a>
+				<a href="#" class="next-news">next</a>
+					</span>
+				</div>
+				<div class="col s12 m12 l12">
+					<div class="row news-slider">
+						<div class="col l4">
+					<div class="box">
+						<div class="image">
+							<img src="img/news_1.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Заголовок первой статьи в блоке “Блог”</a>	
+							</div>
+						</div>
+						<div class="text">
+							<p>Пример текста, где будет описываться в кратце о чем данная статья. Пример текста блока. </p>
+						</div>
+					</div>
+				</div>
+				<div class="col l4">
+					<div class="box">
+						<div class="image">
+							<img src="img/news_2.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Заголовок статьи под номером 3</a>	
+							</div>
+						</div>
+						<div class="text">
+							<p>Пример текста, где будет описываться в кратце о чем данная статья. Пример текста блока. Пример текста блока.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col l4">
+					<div class="box">
+						<div class="image">
+							<img src="img/news_3.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Самый самый последнее название статьи</a>	
+							</div>
+						</div>
+						<div class="text">
+							<p>Пример текста, где будет описываться в кратце о чем данная статья. Пример текста блока.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col l4">
+					<div class="box">
+						<div class="image">
+							<img src="img/news_4.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Самый самый последнее название статьи</a>	
+							</div>
+						</div>
+						<div class="text">
+							<p>Пример текста, где будет описываться в кратце о чем данная статья. Пример текста блока.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col l4">
+					<div class="box">
+						<div class="image">
+							<img src="img/news_5.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Самый самый последнее название статьи</a>	
+							</div>
+						</div>
+						<div class="text">
+							<p>Пример текста, где будет описываться в кратце о чем данная статья. Пример текста блока.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col l4">
+					<div class="box">
+						<div class="image">
+							<img src="img/news_6.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Самый самый последнее название статьи</a>	
+							</div>
+						</div>
+						<div class="text">
+							<p>Пример текста, где будет описываться в кратце о чем данная статья. Пример текста блока.</p>
+						</div>
+					</div>
+				</div>
+					<div class="col l4">
+					<div class="box">
+						<div class="image">
+							<img src="img/news_5.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Самый самый последнее название статьи</a>	
+							</div>
+						</div>
+						<div class="text">
+							<p>Пример текста, где будет описываться в кратце о чем данная статья. Пример текста блока.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col l4">
+					<div class="box">
+						<div class="image">
+							<img src="img/news_6.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Самый самый последнее название статьи</a>	
+							</div>
+						</div>
+						<div class="text">
+							<p>Пример текста, где будет описываться в кратце о чем данная статья. Пример текста блока.</p>
+						</div>
+					</div>
+				</div>
+					<div class="col l4">
+					<div class="box">
+						<div class="image">
+							<img src="img/news_5.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Самый самый последнее название статьи</a>	
+							</div>
+						</div>
+						<div class="text">
+							<p>Пример текста, где будет описываться в кратце о чем данная статья. Пример текста блока.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col l4">
+					<div class="box">
+						<div class="image">
+							<img src="img/news_6.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Самый самый последнее название статьи</a>	
+							</div>
+						</div>
+						<div class="text">
+							<p>Пример текста, где будет описываться в кратце о чем данная статья. Пример текста блока.</p>
+						</div>
+					</div>
+				</div>
+					<div class="col l4">
+					<div class="box">
+						<div class="image">
+							<img src="img/news_5.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Самый самый последнее название статьи</a>	
+							</div>
+						</div>
+						<div class="text">
+							<p>Пример текста, где будет описываться в кратце о чем данная статья. Пример текста блока.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col l4">
+					<div class="box">
+						<div class="image">
+							<img src="img/news_6.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Самый самый последнее название статьи</a>	
+							</div>
+						</div>
+						<div class="text">
+							<p>Пример текста, где будет описываться в кратце о чем данная статья. Пример текста блока.</p>
+						</div>
+					</div>
+				</div>
+					<div class="col l4">
+					<div class="box">
+						<div class="image">
+							<img src="img/news_5.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Самый самый последнее название статьи</a>	
+							</div>
+						</div>
+						<div class="text">
+							<p>Пример текста, где будет описываться в кратце о чем данная статья. Пример текста блока.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col l4">
+					<div class="box">
+						<div class="image">
+							<img src="img/news_6.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Самый самый последнее название статьи</a>	
+							</div>
+						</div>
+						<div class="text">
+							<p>Пример текста, где будет описываться в кратце о чем данная статья. Пример текста блока.</p>
+						</div>
+					</div>
+				</div>
+					<div class="col l4">
+					<div class="box">
+						<div class="image">
+							<img src="img/news_5.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Самый самый последнее название статьи</a>	
+							</div>
+						</div>
+						<div class="text">
+							<p>Пример текста, где будет описываться в кратце о чем данная статья. Пример текста блока.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col l4">
+					<div class="box">
+						<div class="image">
+							<img src="img/news_6.png" alt="">
+							<div class="valign-wrapper">
+							<a href="#" class="name valign">Самый самый последнее название статьи</a>	
+							</div>
+						</div>
+						<div class="text">
+							<p>Пример текста, где будет описываться в кратце о чем данная статья. Пример текста блока.</p>
+						</div>
+					</div>
+				</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="blog">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m12 l12 heading">
+				<span class="h3">БЛОГ <a href="#" class="prev">prev</a>
+				<a href="#" class="next">next</a>
+				</span>
+				</div>
+				<div class="col s12 m12 l12">
+				<div class="row blog-slider ">
+					
+					<div class="col l3">
+					<div class="box center">
+						<div class="image">
+							<img src="img/blog_1.png" alt="">
+						</div>
+						<div class="name">
+							<a href="">Первый заголовок для блока</a>
+						</div>
+					</div>
+				</div>
+				<div class="col l3">
+					<div class="box center">
+						<div class="image">
+							<img src="img/blog_2.png" alt="">
+						</div>
+						<div class="name">
+							<a href="">Второй пример заголовка для блока “Блог”</a>
+						</div>
+					</div>
+				</div>
+				<div class="col l3">
+					<div class="box center">
+						<div class="image">
+							<img src="img/blog_3.png" alt="">
+						</div>
+						<div class="name">
+							<a href="">Второй пример заголовка для блока “Блог”</a>
+						</div>
+					</div>
+				</div>
+				<div class="col l3">
+					<div class="box center">
+						<div class="image">
+							<img src="img/blog_4.png" alt="">
+						</div>
+						<div class="name">
+							<a href="">Второй пример заголовка для блока “Блог”</a>
+						</div>
+					</div>
+				</div>
+				<div class="col l3">
+					<div class="box center">
+						<div class="image">
+							<img src="img/blog_3.png" alt="">
+						</div>
+						<div class="name">
+							<a href="">Второй пример заголовка для блока “Блог”</a>
+						</div>
+					</div>
+				</div>
+				<div class="col l3">
+					<div class="box center">
+						<div class="image">
+							<img src="img/blog_4.png" alt="">
+						</div>
+						<div class="name">
+							<a href="">Второй пример заголовка для блока “Блог”</a>
+						</div>
+					</div>
+				</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="baner-wrap hide-on-small-only hide-on-med-only">
+		<div class="container">
+				<div class="baner center col s12 m12 l12">
+				<div class="row">
+					<img  class="responsive-img" src="img/baner.png" alt="">
+					<div class="text">
+						<span class="h1">Желаете поддержать проект FRONTLINE?
+	Делаем добро вместе!</span>
+						<div class="button center">
+							<a href="">ХОЧУ ПОДДЕРЖАТЬ</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="partners">
+			<div class="container">
+				<div class="row">
+					<div class="col l12">
+						<span class="h3">Наши партнеры</span>
+					</div>
+					<div class="partners-slide col s12 m12 l12">
+						<div class="item">
+							<div class="valign-wrapper">
+								<div class="valign">
+									<img src="img/emmanuil-h.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="valign-wrapper">
+								<div class="valign">
+									<img src="img/dvest-h.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="valign-wrapper">
+								<div class="valign">
+									<img src="img/together-minestry-h.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="valign-wrapper">
+								<div class="valign">
+									<img src="img/saveuk-h.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="valign-wrapper">
+								<div class="valign">
+									<img src="img/neem-h.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="valign-wrapper">
+								<div class="valign">
+									<img src="img/cvcis-h.png" alt="">
+								</div>
+							</div>
+						</div>
+							<div class="item">
+							<div class="valign-wrapper">
+								<div class="valign">
+									<img src="img/emmanuil-h.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="valign-wrapper">
+								<div class="valign">
+									<img src="img/dvest-h.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="valign-wrapper">
+								<div class="valign">
+									<img src="img/together-minestry-h.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="valign-wrapper">
+								<div class="valign">
+									<img src="img/saveuk-h.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="valign-wrapper">
+								<div class="valign">
+									<img src="img/neem-h.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="valign-wrapper">
+								<div class="valign">
+									<img src="img/cvcis-h.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- BEGIN response -->
+	<div class="response">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m12 l5">
+				<span class="right info">Подписаться на рассылку</span>
+				</div>
+				<div class="col s12 m12 l4">
+					<div class="valign-wrapper">
+						<div class="center-align input-field col s12 m12 l12">
+							<input type="text" placeholder="Ваш email">
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m12 l3">
+					<div class="valign-wrapper">
+						<div class="left-align">
+							<button>ПОДПИСАТЬСЯ</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END response -->
+
+</div>
+<!-- END out-->
+	<!-- BEGIN page-footer -->
+	<footer class="page-footer">
+		  <div class="container">
+	            <div class="row top-footer">
+	            <div class="col s12 m6 l3">
+	            	<h5 class="white-text">Основное</h5>
+	            	<ul>
+	            		<li><a href="#">Интерактивная карта</a></li>
+	            		<li><a href="#">Миссионерские центры</a></li>
+	            		<li><a href="#">Новости</a></li>
+	            		<li><a href="#">Блог</a></li>
+	            		<li><a href="#">Видео</a></li>
+	            		<li><a href="#">Нужды</a></li>
+	            		<li><a href="#">Проекты</a></li>
+	            	</ul>
+	            </div>
+	            <div class="col s12 m6 l3">
+	            	<h5 class="white-text">Информация</h5>
+	            	<ul>
+	            		<li><a href="#">О Организации</a></li>
+	            		<li><a href="#">Контакты лидеров</a></li>
+	            		<li><a href="#">Миссионерская школа</a></li>
+	            		<li><a href="#">Расшарить в соцсетях</a></li>
+	            		<li><a href="#">Онлайн консультация</a></li>
+	            		<li><a href="#">Отзывы и комментарии</a></li>
+	            		<li><a href="#">Рекомендуемые нужды</a></li>
+	            	</ul>
+	            </div>
+	            <div class="col s12 m6 l3">
+	            	<h5 class="white-text">ПЛАТЕЖНЫЕ СИСТЕМЫ</h5>
+	            	<ul>
+		        		<li><a href="#">PaYPal</a></li>
+		            	<li><a href="#">ПриватБанк</a></li>
+		            	<li><a href="#">ЯндексДеньги</a></li>
+		            	<li><a href="#">WESTERNUNION</a></li>
+		            	<li><a href="#">WebMoney</a></li>
+	
+	
+	
+	
+	
+	            	</ul>
+	            </div>
+	            <div class="col s12 m6 l3">
+	            	<div class="logo-footer">
+	            	<a href="#">
+	            		<img src="img/logo-f.png" alt="">
+	            	</a>
+	            	</div>
+	            	
+	            </div>
+	            </div>
+	          </div>
+	          <div class="footer-copyright">
+	            <div class="container">
+	            <div class="row">
+	            	<div class="col s12 m12 l5 copy">
+	            		Copyright © 2016 FrontLine
+	            	</div>
+	            	<div class="col s12 m12 l7">
+	            		<span class="left">делаем добро вместе!</span>
+	                        <span class="right">
+	                        <a href="#">
+	                              <img src="img/ilion.png" alt="">
+	                        </a>
+	                        </span>
+	            	</div>
+	            </div>
+	            </div>
+	          </div>
+	</footer>
+	<!-- END page-footer -->
+</body>
+</html>
